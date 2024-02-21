@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+
+:root {
+  --white: hsl(0, 0%, 100%);
+  --light-gray: hsl(212, 45%, 89%);
+  --grayish-blue: hsl(220, 15%, 55%);
+  --dark-blue: hsl(218, 44%, 22%);
+}
+
+a {
+  text-decoration: none;
+  color: var(--grayish-blue);
+  margin: 0 0 0 0.2rem;
+  transition: color 0.2s ease,
+              font-weight 0.2s ease;
+}
+
+a:hover {
+  color: #2d7dfa;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  min-width: fit-content;
+}
+
+.center {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--light-gray);
+  padding: 1rem;
+  max-width: 1200px;
+  width: 90vw;
+  height: 600px;
+  border-radius: 5px;
+  box-shadow: 0px 20px 20px rgb(0, 0, 0, 0.1),
+              -20px 0px 20px rgb(0, 0, 0, 0.1),
+              20px 0px 20px rgb(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5rem;
+}
+
+.qrComponent {
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 6rem;
+  padding: 10px;
+  border-radius: 15px;
+  transition: background-color 0.2s ease-out,
+              color 0.2s ease-out,
+              transform 0.2s ease-out;
+  box-shadow: 0px 20px 20px rgb(0, 0, 0, 0.1),
+              -20px 0px 20px rgb(0, 0, 0, 0.1),
+              20px 0px 20px rgb(0, 0, 0, 0.1);
+
+  .qrCode {
+    width: 12.5rem;
+    height: 12.5rem;
+    border-radius: 5px;
+  }
+
+  .bigText {
+    width: 12.5rem;
+    font-weight: 700;
+    font-size: 1rem;
+  }
+
+  .smallText {
+    width: 12.5rem;
+    font-weight: 400;
+    font-size: .7rem;
+  }
+}
+
+.qrComponent:hover {
+  background-color: #2d7dfa;
+  color: var(--white);
+  transform: scale(1.1);
+}
+
+footer {
+  min-width: max-content;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+  margin-bottom: 1rem;
+}
